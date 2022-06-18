@@ -1,0 +1,136 @@
+.hero {
+  /* display: none; */
+  position: relative;
+  padding-top: 296px;
+  padding-bottom: 300px;
+}
+.hero__presentation{
+  max-width:520px;
+}
+.hero__title {
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 113px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.hero__subtitle {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 57px;
+}
+
+.pink-text {
+  color: #d6258F;
+}
+.hero__bg{
+  width: 100%;
+  height: 100%;
+}
+.hero__bg-img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  object-fit: cover;
+  z-index: -2;
+  /* background: linear-gradient(141.38deg, rgba(0, 0, 0, 0.37) 0.62%, rgba(41, 38, 41, 0.01) 100%); */
+ 
+  
+}
+
+.hero__bg::before{
+  position: absolute;
+  top: 0;
+  left:0;
+  display: block;
+  
+  background-image: url('../img/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  content:'';
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+}
+
+@media(max-width:1440px){
+  .hero{
+    padding-top: 155px;
+    padding-bottom: 221px;
+  }
+    /* .hero__subtitle {
+      line-height: 47px;
+    } */
+} 
+@media(max-width:1024px){
+  .hero{
+    padding-top: 101px;
+    padding-bottom: 101px;
+  }
+  .hero__presentation{
+    max-width: 400px;
+  }
+  .hero__title {
+    font-size: 70px;
+    line-height: 83px;
+    
+  }
+  
+  .hero__subtitle {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+@media(max-width:768px){
+  .hero {
+      padding-top: 84px;
+      padding-bottom: 84px;
+    }
+    .hero__presentation {
+      max-width:90%;
+      margin:auto;
+      text-align: center;
+    }
+  .hero__title{
+    /* text-transform:capitalize; */
+    text-transform: lowercase;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
+  .hero__title::first-letter{
+    text-transform: uppercase;
+  }
+  .hero__subtitle {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .hero__bg::before{
+    display: none;
+  }
+}
+@media(max-width:425px){
+  .hero {
+      padding-top: 90px;
+      padding-bottom: 100px;
+    }
+  .hero__title{
+    
+    
+  }
+  
+  
+}
