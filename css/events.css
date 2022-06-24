@@ -1,10 +1,10 @@
 .events {
-  
+  display: none;
   padding-top: 140px;
   padding-bottom: 140px;
 }
 
-.events__title {
+.section__title {
   font-weight: 400;
   font-size: 64px;
   line-height: 76px;
@@ -161,6 +161,18 @@
     .event__card3{
       display: none;
     }
+    .event__card-title{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .event__card-date{
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .event__card-description{
+    font-size: 16px;
+    line-height: 19px;
+    }
 }
 @media(max-width: 390px){
   .events {
@@ -176,5 +188,13 @@
   .event__card {
       width: 280px;
       height: 580px;
+    }
+    .event__card-date {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    .event__card-description {
+      font-size: 14px;
+      line-height: 16px;
     }
 }

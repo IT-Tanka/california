@@ -13,6 +13,8 @@ body {
   background-color: black;
   margin: 0;
   font-family: Lumberjack, serif;
+  font-style: normal;
+  font-weight: 400;
   color: #ffff;
 }
 

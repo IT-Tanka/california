@@ -1,0 +1,98 @@
+.bar {
+  background-color: #020F1C;
+  padding-top: 45px;
+  padding-bottom: 214px;
+}
+.bar__title{
+  margin-bottom: 113px;
+}
+
+.bar__menu {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  gap: 54px;
+  position: relative;
+}
+
+.bar__list {
+
+}
+
+.bar__item:not(:last-child) {
+margin-bottom: 30px;
+}
+
+.bar__coctail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bar__coctail-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #D6258F;
+  max-width: 170px;
+  ;
+}
+
+.bar__coctail-line {
+  width: 435px;
+  height:28px;
+  border-bottom: 1px dashed #FFFFFF;
+  margin-left: auto;
+}
+
+.bar__coctail-price {
+    font-size: 24px;
+    line-height: 28px;  
+    color: #D6258F;
+    margin-left: 28px;
+}
+
+.bar__ingredients {
+  font-size: 18px;
+  line-height: 21px;
+  max-width: 300px;
+}
+
+.bar__menu-poster {
+  position: relative;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 0px 48px -1px #D6258F;
+  border-radius: 20px;
+  width: 520px;
+  height: 426px;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  right: 25px;
+  top:-195px;
+  z-index: 0;
+
+}
+
+.bar__poster-img {
+  background-image: url(../img/coctail.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  height: 100%;
+}
+
+.bar__btn {
+  border: 2px solid #D6258F;
+  border-radius: 20px;
+  width: 100%;
+  font-family: 'Roboto Condensed Regular';
+  color:#FFFFFF;
+  height: 68px;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 80px;
+
+}
