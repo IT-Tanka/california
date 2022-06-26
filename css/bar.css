@@ -14,7 +14,18 @@
   gap: 54px;
   position: relative;
 }
+.star {
+  position: absolute;
+  left: calc(100% - 284px);
+  top: -195px;
+  z-index: 0;
+  transition: stroke 0.5s ease, stroke-width 0.5s ease;
+}
+.star path:hover{
+  stroke:#c82e6162;
+  stroke-width:10px;
 
+}
 .bar__list {
 
 }
@@ -35,7 +46,7 @@ margin-bottom: 30px;
   line-height: 28px;
   color: #D6258F;
   max-width: 170px;
-  ;
+  cursor: pointer;
 }
 
 .bar__coctail-line {
@@ -57,33 +68,25 @@ margin-bottom: 30px;
   line-height: 21px;
   max-width: 300px;
 }
-
 .bar__menu-poster {
+  width: 100%;
   position: relative;
   border: 1px solid #FFFFFF;
   box-shadow: 0px 0px 48px -1px #D6258F;
   border-radius: 20px;
-  width: 520px;
+  max-width: 520px;
   height: 426px;
   overflow: hidden;
-}
-
-.star {
-  position: absolute;
-  right: 25px;
-  top:-195px;
-  z-index: 0;
-
-}
-
-.bar__poster-img {
   background-image: url(../img/coctail.jpg);
   background-repeat: no-repeat;
   background-position:center;
   background-size: cover;
-  height: 100%;
+  transition: border 0.5s ease, box-shadow 0.5s ease;
 }
-
+.bar__menu-poster:hover{
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 0px 78px -2px #D6258F;
+}
 .bar__btn {
   border: 2px solid #D6258F;
   border-radius: 20px;
@@ -94,5 +97,139 @@ margin-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
   margin-top: 80px;
+  transition:border 0.5s ease, box-shadow 0.5S ease;
+}
+.bar__btn:hover{
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 0px 13px 5px rgba(173, 23, 176, 0.46), 0px 0px 41px -8px rgba(196, 78, 149, 0.76), 1px 2px 33px 8px #D6258F, 0px 0px 12px 7px rgba(211, 144, 184, 0.44);
+}
+@media (max-width:1440px) {
+  .bar{
+    margin-top: 48px;
+    margin-bottom: 65px;
+  }
+}
+@media(max-width:1024px){
+  .bar {
+      margin-bottom: 59px;
+    }
+  .bar__coctail-title, bar__coctail-price{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .bar__ingredients{
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .bar__coctail-line{
+    width: 300px;
+  }
+  
+}
+@media(max-width:768px) {
+  .bar {
+    margin-top: 43px;
+    margin-bottom: 95px;
+    }
+  .bar__menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .bar__menu-poster{
+    order:-1;
+    margin-bottom: 50px;
+  }
+  .bar__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+    .bar__coctail-title,
+    bar__coctail-price {
+      font-size: 18px;
+        line-height: 21px;
+    }
+  
+    .bar__ingredients {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  
+    .bar__coctail-line {
+      width: 350px;
+    }
+    .bar__btn{
+      margin-top: 40px;
+    }
+    .star{
+      z-index:0;
+    }
+}
+@media(max-width:580px){
+  .bar{
+    margin-top: 40px;
+    margin-bottom: 74px;
+  }
+  .bar__title{
+    margin-bottom: 40px;
+  }
+.star{
+    display: none;
+  }
+.bar__list{
+  width: 100%;
+}
+.bar__coctail{
+  margin-bottom: 10px;
+}
+.bar__ingredients {
+  font-size: 14px;
+  line-height: 16px;
+}
 
+.bar__coctail-line {
+  display: none;
+}
+
+.bar__btn {
+  margin-top: 50px;
+}
+.bar__btn{
+  font-size: 18px;
+  line-height: 21px;
+  height: 51px;
+}
+}
+@media(max-width:425px){
+  .bar {
+      margin-top: 40px;
+      margin-bottom: 80px;
+    }
+    .bar__btn {
+      margin-top: 60px;
+    }
+    .bar__menu-poster {
+      max-height: 300px;
+    }
+    .bar__btn {
+      font-size: 14px;
+      line-height: 17px;
+      height: 37px;
+    }
+}
+@media(max-width:320px) {
+  .bar {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  .bar__btn {
+    margin-top: 60px;
+  }
+
+  .bar__menu-poster {
+    max-height: 200px;
+  }
 }
