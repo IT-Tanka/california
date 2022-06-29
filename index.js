@@ -1,16 +1,18 @@
 const barCoctails=document.querySelectorAll('.bar__coctail-title');
-const barPoster=document.querySelector('.bar__menu-poster');
-const imgCoctailArr=['coctail.jpg','otvertka.jpg','appl-tonic.jpg','djin-tonic.jpg'];
-console.log('barCoctails: ', barCoctails);
+const barPosterImgs=document.querySelectorAll('.bar__menu-img');
 
+barPosterImgs[0].style.opacity='1';
 barCoctails.forEach((item, i) => {
   item.addEventListener('mouseover', ()=>{
-    console.log('click');
     item.style.color='white';
-    barPoster.style.backgroundImage=`url(img/${imgCoctailArr[i]})`;
+    
+    for (let j=0; j<=4; j++){
+      barPosterImgs[j].style.opacity='0';
+    };
+    
+    barPosterImgs[i+1].style.opacity='1';
   });
   item.addEventListener('mouseout', ()=>{
-    console.log('click');
     item.style.color='#D6258F';
   });
-})
+});

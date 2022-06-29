@@ -6,7 +6,6 @@
 .bar__title{
   margin-bottom: 113px;
 }
-
 .bar__menu {
   display: flex;
   align-items: top;
@@ -19,50 +18,42 @@
   left: calc(100% - 284px);
   top: -195px;
   z-index: 0;
-  transition: stroke 0.5s ease, stroke-width 0.5s ease;
+  transition: stroke 0.5s ease;
 }
 .star path:hover{
   stroke:#c82e6162;
-  stroke-width:10px;
-
+  stroke-width:15px;
+  fill:#d6258f31;
 }
-.bar__list {
-
-}
-
 .bar__item:not(:last-child) {
 margin-bottom: 30px;
 }
-
 .bar__coctail {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
-
 .bar__coctail-title {
   font-size: 24px;
   line-height: 28px;
   color: #D6258F;
   max-width: 170px;
   cursor: pointer;
+  transition: color 0.7s ease;
 }
-
 .bar__coctail-line {
   width: 435px;
   height:28px;
   border-bottom: 1px dashed #FFFFFF;
   margin-left: auto;
 }
-
 .bar__coctail-price {
     font-size: 24px;
     line-height: 28px;  
     color: #D6258F;
     margin-left: 28px;
 }
-
 .bar__ingredients {
   font-size: 18px;
   line-height: 21px;
@@ -77,15 +68,62 @@ margin-bottom: 30px;
   max-width: 520px;
   height: 426px;
   overflow: hidden;
-  background-image: url(../img/coctail.jpg);
-  background-repeat: no-repeat;
-  background-position:center;
-  background-size: cover;
-  transition: border 0.5s ease, box-shadow 0.5s ease;
+  transition:box-shadow .5s;
 }
 .bar__menu-poster:hover{
-  border: 1px solid #FFFFFF;
-  box-shadow: 0px 0px 78px -2px #D6258F;
+  /* box-shadow: 0px 0px 178px -2px #D6258F; */
+  box-shadow: 0px 0px 13px 5px rgba(173, 23, 176, 0.46), 0px 0px 41px -8px rgba(196, 78, 149, 0.76), 1px 2px 33px 8px #D6258F, 0px 0px 12px 7px rgba(211, 144, 184, 0.44);
+}
+.bar__menu-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;  
+  transition: opacity 2s; 
+}
+.image0{
+  background-image:  url(../img/bar/coctail.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: background .5s;
+  opacity: 0;
+  transition: opacity 2s;
+
+}
+.image1{
+  background-image: url(../img/bar/lime.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: background .5s;
+  opacity: 0;
+transition: opacity 2s;
+}
+.image2{
+  background-image: url(../img/bar/otvertka.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 2s;
+}
+.image3{
+  background-image: url(../img/bar/apple.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 2s;
+}
+.image4{
+  background-image: url(../img/bar/cocktail-foreva.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 2s;
 }
 .bar__btn {
   border: 2px solid #D6258F;
@@ -105,13 +143,13 @@ margin-bottom: 30px;
 }
 @media (max-width:1440px) {
   .bar{
-    margin-top: 48px;
-    margin-bottom: 65px;
+    padding-top: 48px;
+    padding-bottom: 65px;
   }
 }
 @media(max-width:1024px){
   .bar {
-      margin-bottom: 59px;
+    padding-bottom: 59px;
     }
   .bar__coctail-title, bar__coctail-price{
     font-size: 20px;
@@ -128,8 +166,8 @@ margin-bottom: 30px;
 }
 @media(max-width:768px) {
   .bar {
-    margin-top: 43px;
-    margin-bottom: 95px;
+    padding-top: 43px;
+    padding-bottom: 74px;
     }
   .bar__menu{
     display: flex;
@@ -151,7 +189,9 @@ margin-bottom: 30px;
       font-size: 18px;
         line-height: 21px;
     }
-  
+  .star{
+    display: none;
+  }
     .bar__ingredients {
       font-size: 16px;
       line-height: 19px;
@@ -163,49 +203,45 @@ margin-bottom: 30px;
     .bar__btn{
       margin-top: 40px;
     }
-    .star{
-      z-index:0;
-    }
+    
 }
 @media(max-width:580px){
   .bar{
-    margin-top: 40px;
-    margin-bottom: 74px;
+    padding-top: 40px;
+    padding-bottom: 47px;
   }
   .bar__title{
     margin-bottom: 40px;
   }
-.star{
+  .star{
+      display: none;
+    }
+  .bar__list{
+    width: 100%;
+  }
+  .bar__coctail{
+    margin-bottom: 10px;
+  }
+  .bar__ingredients {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .bar__coctail-line {
     display: none;
   }
-.bar__list{
-  width: 100%;
-}
-.bar__coctail{
-  margin-bottom: 10px;
-}
-.bar__ingredients {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.bar__coctail-line {
-  display: none;
-}
-
-.bar__btn {
-  margin-top: 50px;
-}
-.bar__btn{
-  font-size: 18px;
-  line-height: 21px;
-  height: 51px;
-}
+  .bar__btn {
+    margin-top: 50px;
+  }
+  .bar__btn{
+    font-size: 18px;
+    line-height: 21px;
+    height: 51px;
+  }
 }
 @media(max-width:425px){
   .bar {
-      margin-top: 40px;
-      margin-bottom: 80px;
+      padding-top: 40px;
+      padding-bottom: 33px;
     }
     .bar__btn {
       margin-top: 60px;
@@ -220,15 +256,9 @@ margin-bottom: 30px;
     }
 }
 @media(max-width:320px) {
-  .bar {
-    margin-top: 40px;
-    margin-bottom: 80px;
-  }
-
   .bar__btn {
     margin-top: 60px;
   }
-
   .bar__menu-poster {
     max-height: 200px;
   }
