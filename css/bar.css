@@ -1,4 +1,5 @@
 .bar {
+  display: none;
   background-color: #020F1C;
   padding-top: 45px;
   padding-bottom: 214px;
@@ -168,7 +169,10 @@ transition: opacity 2s;
   .bar {
     padding-top: 43px;
     padding-bottom: 74px;
-    }
+  }
+  .bar__title{
+    margin-bottom: 90px;
+  }
   .bar__menu{
     display: flex;
     flex-direction: column;
@@ -178,6 +182,8 @@ transition: opacity 2s;
   .bar__menu-poster{
     order:-1;
     margin-bottom: 50px;
+    height: 350px;
+
   }
   .bar__list{
     display: flex;
@@ -186,24 +192,22 @@ transition: opacity 2s;
   }
     .bar__coctail-title,
     bar__coctail-price {
-      font-size: 18px;
-        line-height: 21px;
+    font-size: 18px;
+    line-height: 21px;
     }
   .star{
     display: none;
   }
-    .bar__ingredients {
-      font-size: 16px;
-      line-height: 19px;
-    }
-  
-    .bar__coctail-line {
-      width: 350px;
-    }
-    .bar__btn{
-      margin-top: 40px;
-    }
-    
+  .bar__ingredients {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .bar__coctail-line {
+    width: 350px;
+  }
+  .bar__btn{
+    margin-top: 40px;
+  } 
 }
 @media(max-width:580px){
   .bar{
@@ -218,6 +222,10 @@ transition: opacity 2s;
     }
   .bar__list{
     width: 100%;
+  }
+  .bar__menu-poster {
+    margin-bottom: 34px;
+    height: 300px;
   }
   .bar__coctail{
     margin-bottom: 10px;

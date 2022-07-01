@@ -1,0 +1,20 @@
+.location{
+position: relative;
+}
+.location__map{
+  display: flex;
+  /* filter: grayscale(100%) contrast(100%) invert(75%); */
+  filter: brightness(1.4);
+  filter: contrast(200%); 
+  filter: grayscale(50%);
+  filter: invert(75%);
+}
+.location__icon{
+  position: absolute;
+  top:calc(50% -  48px);
+  left:calc(50% - 24px);
+  fill: aliceblue;
+}
+.location__icon path{
+  fill:rgb(16, 239, 168);
+}
