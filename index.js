@@ -16,3 +16,20 @@ barCoctails.forEach((item, i) => {
     item.style.color='#D6258F';
   });
 });
+
+// Подключение карты Leaflet
+
+const map = L.map('map', {scrollWheelZoom:false}).setView([46.47802567837957, 30.738858285596844],18);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    maxZoom:19,
+    // attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+  
+const greenIcon = L.icon({
+    iconUrl: 'img/icon.svg',
+    iconSize:     [48, 48], // size of the icon
+    iconAnchor:   [46, 30], // point of the icon which will correspond to marker's location
+    popupAnchor:  [2, -27] // point from which the popup should open relative to the iconAnchor
+  });
+L.marker([46.47802567837957, 30.738858285596844], {icon: greenIcon}).addTo(map).bindPopup('CALIFORNIA');

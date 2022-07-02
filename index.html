@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CALIFORNIA BAR -лучший концертный бар в Одессе </title>
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""></script>
   <script src="index.js" defer></script>
 </head>
 <body>
@@ -423,63 +429,34 @@
       </div>
     </section>
     <section class="location">
-      <div class="location__map">
-        <svg class="location__icon" "width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_579_3042)">
-            <g filter="url(#filter0_d_579_3042)">
-              <path
-                d="M24 28C28.412 28 32 24.412 32 20C32 15.588 28.412 12 24 12C19.588 12 16 15.588 16 20C16 24.412 19.588 28 24 28ZM24 16C26.206 16 28 17.794 28 20C28 22.206 26.206 24 24 24C21.794 24 20 22.206 20 20C20 17.794 21.794 16 24 16Z"
-                fill="none" />
-            </g>
-            <g filter="url(#filter1_d_579_3042)">
-              <path
-                d="M22.8401 43.628C23.1786 43.8697 23.5842 43.9997 24.0001 43.9997C24.4161 43.9997 24.8216 43.8697 25.1601 43.628C25.7681 43.198 40.0581 32.88 40.0001 20C40.0001 11.178 32.8221 4 24.0001 4C15.1781 4 8.00012 11.178 8.00012 19.99C7.94212 32.88 22.2321 43.198 22.8401 43.628ZM24.0001 8C30.6181 8 36.0001 13.382 36.0001 20.01C36.0421 28.886 27.2241 36.856 24.0001 39.47C20.7781 36.854 11.9581 28.882 12.0001 20C12.0001 13.382 17.3821 8 24.0001 8Z"
-                fill="none" />
-            </g>
-          </g>
-          <defs>
-            <filter id="filter0_d_579_3042" x="9" y="5" width="30" height="30" filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha" />
-              <feOffset />
-              <feGaussianBlur stdDeviation="3.5" />
-              <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.15 0 0 0 0 0.76 0 0 0 1 0" />
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_579_3042" />
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_579_3042" result="shape" />
-            </filter>
-            <filter id="filter1_d_579_3042" x="0.999939" y="-3" width="46.0004" height="53.9995" filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha" />
-              <feOffset />
-              <feGaussianBlur stdDeviation="3.5" />
-              <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.15 0 0 0 0 0.76 0 0 0 1 0" />
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_579_3042" />
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_579_3042" result="shape" />
-            </filter>
-            <clipPath id="clip0_579_3042">
-              <rect width="48" height="48" fill="none" />
-            </clipPath>
-          </defs>
-        </svg>
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5495.091142031734!2d30.73355288217719!3d46.477508502004206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6319b910027c5%3A0xf7517e6ede3dd710!2z0JXQstGA0LXQudGB0LrQsNGPINGD0LsuLCAyNywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1656700456005!5m2!1sru!2sua"
-          width="3600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <div class="location__map" id="map">
+        
       </div>
-      <div class="location__address">
-
+      <div class="location__contacts">
+        <h4 class="location__contacts_title">California Bar</h4>
+        <p class="location__contacts-address">г. Одесса, ул. Еврейская, 27</p>
+        <a href="tel:380505798004" class="location__contacts-phone">+ 380 (50) 579 80 04</a>
+        <span class="location__contacts-span">Работаем круглосуточно</span>
       </div>
+      
 
     </section>
   </main>
   <footer class="footer">
-
+    <!-- <div class="footer_line"> -->
+      <img src="img/line.svg" alt="" class="footer__line">
+    <!-- </div> -->
+    <div class="container">
+      <div class="footer__contacts">
+        <a href="#" class="footer__contacts-link">
+          <img src="img/vk.svg" alt="" class="footer__contact-img">
+        </a>
+        <a href="" class="footer__contacts-link">
+          <img src="img/instagram.svg" alt="" class="footer__contact-img">
+        </a>   
+      </div>
+      
+    </div>
   </footer>
 </body>
 </html>
