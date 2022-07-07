@@ -39,6 +39,8 @@
 }
 
 .event__card {
+  border-top-right-radius: 20px;
+  overflow: hidden;
   max-width: 410px;
   width: calc(33.33% - 40px);
   height:max-content;
@@ -46,7 +48,7 @@
   padding-bottom: 27px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows:1fr 56px 23px 1fr;
+  grid-template-rows:1.5fr 56px 23px 1fr;
   gap: 10px;
   grid-template-areas:
     "event__card-poster"
