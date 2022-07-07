@@ -1,5 +1,5 @@
 .disco {
-  /* display: none; */
+  display: none;
   padding: 228px 0 305px;
   background: url('../img/disco.jpg') no-repeat center/cover;
 }
