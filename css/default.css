@@ -165,11 +165,10 @@ img, svg {
 }
 @media(max-width:435px){
   .container{
-    min-width:318px;
+    min-width:300px;
     width: 100%;
     padding-left: 18px;
     padding-right: 18px;
   }
-
 }
 

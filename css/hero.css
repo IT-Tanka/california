@@ -1,9 +1,9 @@
 .hero {
-  display: none;
   position: relative;
   padding-top: 296px;
   padding-bottom: 300px;
 }
+
 .hero__presentation{
   max-width:500px;
 }
@@ -95,25 +95,30 @@
       padding-top: 84px;
       padding-bottom: 84px;
     }
+
     .hero__presentation {
       max-width:90%;
       margin:auto;
       text-align: center;
     }
+
   .hero__title{
     text-transform: lowercase;
     font-size: 36px;
     line-height: 42px;
     margin-bottom: 20px;
   }
+
   .hero__title::first-letter{
     text-transform: uppercase;
   }
+
   .hero__subtitle {
     font-size: 24px;
     line-height: 28px;
     text-align: center;
   }
+  
   .hero__bg::before{
     display: none;
   }

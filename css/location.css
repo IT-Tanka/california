@@ -1,6 +1,5 @@
 .location{
-  display:none;
-position: relative;
+  position: relative;
 }
 
 .location__map{
@@ -45,11 +44,13 @@ position: relative;
   .location__map {
     height: 400px;
   }
+
   .location__contacts_title {
     font-size: 36px;
     line-height: 42px;
   }
 }
+
 @media(max-width:425px){
   .location__map {
     height: 293px;

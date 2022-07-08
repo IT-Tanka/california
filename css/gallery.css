@@ -47,8 +47,8 @@
   .gallery__block {
     max-width: 354px;
   }
-  
 }
+
 @media(max-width:425px) {
   .gallery {
       padding: 55px 0 55px;
@@ -61,6 +61,7 @@
     max-height: 150px;
   }
 }
+
 @media(max-width:320px) {
   .gallery{
     padding: 52px 0 44px;
