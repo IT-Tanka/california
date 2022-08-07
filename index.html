@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,40 +19,38 @@
     <div class="container menu">
       <ul class="menu__list">
         <li class="menu__item">
-          <a href="#" class="menu__link">Барное меню</a>
+          <a href="#bar" class="menu__link">Барное меню</a>
         </li>
         <li class="menu__item">
-          <a href="#" class="menu__link">Меню алкошок</a>
+          <a href="#events" class="menu__link">Мероприятия</a>
         </li>
       </ul>
       <img src="img/logo.png" alt="логотип" class="menu__logo">
       <ul class="menu__list">
         <li class="menu__item">
-          <a href="#" class="menu__link">Контакты</a>
+          <a href="#contacts" class="menu__link">Контакты</a>
         </li>
         <li class="menu__item">
-          <a href="#" class="menu__link">California diner</a>
+          <a href="#hero" class="menu__link">California diner</a>
         </li>
       </ul>
     </div>
   </header>
   <main class="main">
-    <div class="hero">
+    <div class="hero" id="hero">
       <div class="container">
         <div class="hero__presentation">
           <h1 class="hero__title light_text"> 
             CALIFORNIA BAR</h1>
           <p class="hero__subtitle">
-            Лучший <span class="pink-text">концертный бар</span> <span> в&nbsp; Одессе</span> 
+            Лучший 
+            <span class="pink-text">концертный бар</span> 
+              в Одессе 
           </p>
-        </div>
-        
-      </div>
-      <div class="hero__bg">
-        <img src="img/hero.jpg" alt="" class="hero__bg-img"> 
+        </div>  
       </div>
     </div>
-    <section class="events container">
+    <section class="events container" id="events" >
         <h2 class="section__title light_text">
           БЛИЖАЙШИЕ МЕРОПРИЯТИЯ
         </h2>
@@ -249,7 +247,7 @@
       </div>
       </div>
     </section>
-    <section class="bar">    
+    <section class="bar" id="bar">    
       <div class="container">
         <h2 class="section__title bar__title light_text">
           НОВИНКИ БАРА
@@ -310,7 +308,7 @@
       <h2 class="disco__title">Дискотека</h2>
       <p class="disco__subtitle">Каждую пятницу и субботу</p>
     </section>
-    <section class="gallery">
+    <section class="gallery view-sect" >
       <div class="container">
         <h1 class="gallery__title section__title light_text">
           Галерея 
@@ -339,7 +337,6 @@
     </section>
     <section class="location">
       <div class="location__map" id="map">
-        
       </div>
       <div class="location__contacts">
         <h4 class="location__contacts_title">California Bar</h4>
@@ -350,10 +347,9 @@
     </section>
   </main>
   <div class="line"></div>
-  <footer class="footer">
-    
+  <footer class="footer" id="contacts">
     <div class="container">
-      <div class="footer__contacts">
+      <div class="footer__contacts" >
         <a href="#" class="footer__contacts-link">
           <img src="img/vk.svg" alt="" class="footer__contact-img">
         </a>

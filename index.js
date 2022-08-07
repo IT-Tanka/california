@@ -1,5 +1,19 @@
 const barCoctails=document.querySelectorAll('.bar__coctail-title');
 const barPosterImgs=document.querySelectorAll('.bar__menu-img');
+const menuLinks=document.querySelectorAll('.menu__link');
+// const viewSections=document.querySelectorAll('.view-sect');
+
+menuLinks.forEach((link)=>{
+  link.addEventListener('click',()=>{
+    e.preventDefault();
+    const blockID = anchor.getAttribute('href');
+    document.querySelector(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+});
+
+});
 
 barPosterImgs[0].style.opacity='1';
 barCoctails.forEach((item, i) => {

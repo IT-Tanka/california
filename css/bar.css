@@ -1,5 +1,4 @@
 .bar {
-  display: none;
   background-color: #020F1C;
   padding-top: 45px;
   padding-bottom: 214px;
@@ -122,7 +121,7 @@
 
 .bar__btn {
   border: 2px solid #D6258F;
-  border-radius: 20px;
+  border-radius: 5px;
   width: 100%;
   font-family: 'Roboto Condensed Regular';
   color:#FFFFFF;

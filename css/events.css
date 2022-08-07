@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 .events__arrow{
@@ -39,7 +39,7 @@
 }
 
 .event__card {
-  border-top-right-radius: 20px;
+  border-top-right-radius: 10px;
   overflow: hidden;
   max-width: 410px;
   width: calc(33.33% - 40px);
